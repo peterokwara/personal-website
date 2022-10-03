@@ -1,19 +1,26 @@
 module.exports = {
-  siteMetadata: {
-    title: `personal-website`,
-    siteUrl: `https://peterokwara.com`
-  },
-  plugins: [
-    "gatsby-plugin-sass",
-    "gatsby-plugin-mdx",
-    "gatsby-plugin-image",
-    "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp", {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        "name": "pages",
-        "path": "./src/pages/"
-      },
-      __key: "pages"
-    }]
+    siteMetadata: {
+        siteUrl: `https://www.peterokwara.com`,
+        author: `Peter Okwara`
+    },
+    plugins: [
+        "gatsby-plugin-postcss",
+        "gatsby-plugin-image",
+        "gatsby-plugin-sharp",
+        "gatsby-plugin-catch-links",
+        "gatsby-plugin-react-helmet",
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                path: `${__dirname}/src/blog`,
+                name: "blog"
+            }
+        },
+        {
+            resolve: "gatsby-transformer-remark",
+            options: {
+                plugins: []
+            }
+        }
+    ]
 };
