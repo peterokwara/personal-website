@@ -7,11 +7,11 @@ const Blog = ({ data }) => {
     const { allMarkdownRemark: posts } = data;
 
     return (
-        <main className="flex flex-col w-full h-screen bg-gray">
+        <main className="flex flex-col w-full h-screen bg-background">
             <Header />
             <section className="m-8 lg:px-40 md:px-40">
                 <div className="flex flex-col">
-                    <h2 className="text-4xl font-semibold">Blog</h2>
+                    <h2 className="text-4xl font-semibold text-headline">Blog</h2>
                     <ol>
                         {posts.edges.map((post, i) => {
                             const title = post.node.frontmatter.title;

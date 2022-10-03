@@ -9,12 +9,12 @@ export default function Blog({
 }) {
     const { markdownRemark: post } = data; // data.markdownRemark holds your post data
     return (
-        <main className="flex flex-col w-full h-screen bg-gray">
+        <main className="flex flex-col w-full h-screen bg-background">
             <Header />
             <section className="m-8 lg:px-40">
-                <h1 className="text-4xl font-semibold">{post.frontmatter.title}</h1>
+                <h1 className="text-4xl font-semibold text-headline">{post.frontmatter.title}</h1>
                 <div
-                    className="font-serif blog-post-content text-brown"
+                    className="font-serif blog-post-content text-paragraph"
                     dangerouslySetInnerHTML={{ __html: post.html }}
                 />
             </section>

@@ -17,9 +17,9 @@ export const Header = () => {
                 open={open}
                 onClick={() => setOpen(!open)}
             >
-                <div className={` w-6 m-1 h-1 bg-black  ${open ? "-rotate-45 translate-y-2" : "rotate-0"}`}></div>
-                <div className={` w-6 m-1 h-1 bg-black  ${open ? "opacity-0" : "opacity-1"}`}></div>
-                <div className={` w-6  m-1 h-1 bg-black  ${open ? "rotate-45 -translate-y-2" : "rotate-0"}`}></div>
+                <div className={` w-6 m-1 h-1 bg-stroke  ${open ? "-rotate-45 translate-y-2" : "rotate-0"}`}></div>
+                <div className={` w-6 m-1 h-1 bg-stroke  ${open ? "opacity-0" : "opacity-1"}`}></div>
+                <div className={` w-6  m-1 h-1 bg-stroke  ${open ? "rotate-45 -translate-y-2" : "rotate-0"}`}></div>
             </button>
             <div className="flex-row hidden md:flex lg:flex ">
                 <a href="/" className="px-4 py-5 text-2xl font-semibold text-black">

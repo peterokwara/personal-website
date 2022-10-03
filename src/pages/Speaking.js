@@ -1,15 +1,16 @@
 import * as React from "react";
+import { SpeakingCard } from "../components/Common/SpeakingCard/SpeakingCard";
 import { Header } from "../components/Layout/Header/Header";
 import talks from "../data/speaking.json";
 
 const Speaking = () => {
     return (
-        <main className="flex flex-col w-full h-full bg-gray">
+        <main className="flex flex-col w-full h-screen bg-background">
             <Header />
             <section className="m-8 lg:px-40 md:px-40">
                 <div className="flex flex-col">
-                    <h2 className="text-4xl font-semibold">Speaking</h2>
-                    <h2 className="py-4 text-2xl font-semibold">Upcoming Talks</h2>
+                    <h2 className="text-4xl font-semibold text-headline">Speaking</h2>
+                    <h2 className="py-4 text-2xl font-semibold text-headline">Upcoming Talks</h2>
                     {talks.upcoming.length !== 0 ? (
                         <ol>
                             {talks.upcoming.map((talk, i) => {
@@ -18,29 +19,17 @@ const Speaking = () => {
                                 const event = talk.event;
                                 const link = talk.link;
 
-                                return (
-                                    <a href={link} key={i}>
-                                        <div
-                                            className={
-                                                "relative flex flex-col p-6 my-4 border-2 border-black rounded-lg bg-gray h-56 lg:h-20 w-full"
-                                            }
-                                        >
-                                            <h5 className="mb-2 text-sm font-semibold text-headline">{date}</h5>
-                                            <h5 className="mb-2 text-xl font-semibold text-headline">{title}</h5>
-                                            <h5 className="mb-2 text-base font-semibold text-headline">{event}</h5>
-                                        </div>
-                                    </a>
-                                );
+                                return <SpeakingCard date={date} title={title} event={event} link={link} key={i} />;
                             })}
                         </ol>
                     ) : (
-                        <p className="text-base text-brown">
+                        <p className="text-base text-brown text-paragraph">
                             Want me to speak at your event? Reach out to me via{" "}
-                            <a href="mailto:ojakaapeter@gmail.com" className="text-button">
+                            <a href="mailto:ojakaapeter@gmail.com" className="text-highlight">
                                 email&nbsp;
                             </a>
                             or
-                            <a href="twitter.com/peterokwara" className="text-button">
+                            <a href="twitter.com/peterokwara" className="text-highlight">
                                 &nbsp; twitter.
                             </a>
                         </p>
@@ -53,19 +42,7 @@ const Speaking = () => {
                             const event = talk.event;
                             const link = talk.link;
 
-                            return (
-                                <a href={link} key={i}>
-                                    <div
-                                        className={
-                                            "relative flex flex-col p-6 my-4 border-2 border-black rounded-lg bg-gray h-56 lg:h-36 w-full"
-                                        }
-                                    >
-                                        <h5 className="mb-2 text-sm font-semibold text-headline">{date}</h5>
-                                        <h5 className="mb-2 text-xl font-semibold text-headline">{title}</h5>
-                                        <h5 className="mb-2 text-base font-semibold text-headline">{event}</h5>
-                                    </div>
-                                </a>
-                            );
+                            return <SpeakingCard date={date} title={title} event={event} link={link} key={i} />;
                         })}
                     </ol>
                 </div>

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Card } from "../Card/Card";
+import { SkillCard } from "../SkillCard/SkillCard";
 import { StaticImage } from "gatsby-plugin-image";
 
 export const Carousel = () => {
@@ -26,7 +26,7 @@ export const Carousel = () => {
         switch (card) {
             case 1:
                 return (
-                    <Card heading={content[0].title} content={content[0].content}>
+                    <SkillCard heading={content[0].title} content={content[0].content}>
                         <StaticImage
                             className="bg-center rounded-full"
                             src="../../../images/react.png"
@@ -97,11 +97,11 @@ export const Carousel = () => {
                             height={40}
                             alt="mocha"
                         />
-                    </Card>
+                    </SkillCard>
                 );
             case 2:
                 return (
-                    <Card heading={content[1].title} content={content[1].content}>
+                    <SkillCard heading={content[1].title} content={content[1].content}>
                         <StaticImage
                             className="bg-center rounded-full"
                             src="../../../images/docker.png"
@@ -144,11 +144,11 @@ export const Carousel = () => {
                             height={40}
                             alt="fluentd"
                         />
-                    </Card>
+                    </SkillCard>
                 );
             case 3:
                 return (
-                    <Card heading={content[2].title} content={content[2].content}>
+                    <SkillCard heading={content[2].title} content={content[2].content}>
                         <StaticImage
                             className="bg-center rounded-full"
                             src="../../../images/ethereum.png"
@@ -170,7 +170,7 @@ export const Carousel = () => {
                             height={40}
                             alt="eos"
                         />
-                    </Card>
+                    </SkillCard>
                 );
 
             default:
@@ -181,7 +181,7 @@ export const Carousel = () => {
     const allCards = () => {
         return (
             <>
-                <Card heading={content[0].title} content={content[0].content}>
+                <SkillCard heading={content[0].title} content={content[0].content}>
                     <StaticImage
                         className="bg-center rounded-full"
                         src="../../../images/react.png"
@@ -252,8 +252,8 @@ export const Carousel = () => {
                         height={40}
                         alt="mocha"
                     />
-                </Card>
-                <Card heading={content[1].title} content={content[1].content}>
+                </SkillCard>
+                <SkillCard heading={content[1].title} content={content[1].content}>
                     <StaticImage
                         className="bg-center rounded-full"
                         src="../../../images/docker.png"
@@ -296,8 +296,8 @@ export const Carousel = () => {
                         height={40}
                         alt="fluentd"
                     />
-                </Card>
-                <Card heading={content[2].title} content={content[2].content}>
+                </SkillCard>
+                <SkillCard heading={content[2].title} content={content[2].content}>
                     <StaticImage
                         className="bg-center rounded-full"
                         src="../../../images/ethereum.png"
@@ -319,7 +319,7 @@ export const Carousel = () => {
                         height={40}
                         alt="eos"
                     />
-                </Card>
+                </SkillCard>
             </>
         );
     };
@@ -330,15 +330,15 @@ export const Carousel = () => {
             <div className="hidden gap-4 lg:justify-center lg:flex-row lg:flex">{allCards()}</div>
             <div className="flex flex-row justify-center lg:hidden">
                 <div
-                    className="w-4 h-4 ml-1 mr-1 bg-white border-2 border-black rounded-full cursor-pointer hover:bg-focus focus:bg-focus active:bg-focus"
+                    className="w-4 h-4 ml-1 mr-1 rounded-full cursor-pointer bg-card-background hover:bg-highlight focus:bg-highlight active:bg-focus drop-shadow-md "
                     onClick={() => setActive(1)}
                 />
                 <div
-                    className="w-4 h-4 ml-1 mr-1 bg-white border-2 border-black rounded-full cursor-pointer hover:bg-focus focus:bg-focus active:bg-focus"
+                    className="w-4 h-4 ml-1 mr-1 rounded-full cursor-pointer bg-card-background hover:bg-highlight focus:bg-highlight active:bg-focus drop-shadow-md "
                     onClick={() => setActive(2)}
                 />
                 <div
-                    className="w-4 h-4 ml-1 mr-1 bg-white border-2 border-black rounded-full cursor-pointer hover:bg-focus focus:bg-focus active:bg-focus"
+                    className="w-4 h-4 ml-1 mr-1 rounded-full cursor-pointer bg-card-background hover:bg-highlight focus:bg-highlight active:bg-focus drop-shadow-md "
                     onClick={() => setActive(3)}
                 />
             </div>

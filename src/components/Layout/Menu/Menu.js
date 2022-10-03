@@ -3,7 +3,7 @@ import * as React from "react";
 export const Menu = props => {
     return (
         <div
-            className={`fixed top-0 left-0 z-10 items-center justify-center w-screen h-screen lg:hidden md:hidden bg-gray opacity-80 ${
+            className={`fixed top-0 left-0 z-10 items-center justify-center w-screen h-screen lg:hidden md:hidden bg-background opacity-80 ${
                 props.open ? "flex" : "hidden"
             }`}
         >
