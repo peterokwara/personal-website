@@ -29,11 +29,11 @@ const IndexPage = ({ data }) => {
                         </p>
                     </div>
                 </div>
-                <div className="py-4 pt-15">
+                <div className="py-4 pt-20">
                     <h2 className="py-2 font-sans text-4xl font-semibold text-center text-headline">My Skillset</h2>
                     <Carousel />
                 </div>
-                <div className="py-4 pt-15">
+                <div className="py-4 pt-20">
                     <h2 className="py-2 text-4xl font-semibold text-center lg:text-left text-headline">
                         Latest Articles
                     </h2>
@@ -53,7 +53,7 @@ const IndexPage = ({ data }) => {
                         </ol>
                     </div>
                 </div>
-                <div className="flex flex-col pt-15" id="Contact">
+                <div className="flex flex-col pt-20" id="Contact">
                     <h2 className="font-sans text-4xl font-semibold text-center text-headline">Get in touch</h2>
                     <p className="py-4 font-serif text-xl text-center text-paragraph">
                         Are you interested in collaborating or want to connect or chat? If so, hit the contact button
