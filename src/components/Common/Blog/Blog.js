@@ -13,16 +13,12 @@ export default function Blog({
             <Header />
             <section className="m-8 lg:px-40">
                 <h1 className="text-4xl font-semibold">{post.frontmatter.title}</h1>
-                <div className="blog-post-content" dangerouslySetInnerHTML={{ __html: post.html }} />
+                <div
+                    className="font-serif blog-post-content text-brown"
+                    dangerouslySetInnerHTML={{ __html: post.html }}
+                />
             </section>
         </main>
-        // <div className="blog-post-container">
-        //     <Helmet title={`Your Blog Name - ${post.frontmatter.title}`} />
-        //     <div className="blog-post">
-        //         <h1>{post.frontmatter.title}</h1>
-        //         <div className="blog-post-content" dangerouslySetInnerHTML={{ __html: post.html }} />
-        //     </div>
-        // </div>
     );
 }
 

@@ -6,7 +6,7 @@ const Speaking = () => {
     return (
         <main className="flex flex-col w-full h-full bg-gray">
             <Header />
-            <section className="m-8 lg:px-40">
+            <section className="m-8 lg:px-40 md:px-40">
                 <div className="flex flex-col">
                     <h2 className="text-4xl font-semibold">Speaking</h2>
                     <h2 className="py-4 text-2xl font-semibold">Upcoming Talks</h2>

@@ -326,7 +326,7 @@ export const Carousel = () => {
 
     return (
         <div className="py-4">
-            <div className="flex flex-row justify-center gap-4 overflow-hidden md:hidden lg:hidden">{cardSlider()}</div>
+            <div className="flex flex-row justify-center gap-4 overflow-hidden lg:hidden">{cardSlider()}</div>
             <div className="hidden gap-4 lg:justify-center lg:flex-row lg:flex">{allCards()}</div>
             <div className="flex flex-row justify-center lg:hidden">
                 <div

@@ -11,7 +11,7 @@ const IndexPage = ({ data }) => {
     return (
         <main className="flex flex-col w-full bg-gray">
             <Header />
-            <section className="m-8 lg:px-40">
+            <section className="m-8 lg:px-40 md:px-40" >
                 <div className="flex flex-col lg:flex-row-reverse lg:justify-center lg:items-center">
                     <div className="flex justify-center">
                         <StaticImage
