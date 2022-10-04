@@ -3,17 +3,24 @@
     "past": [
         {
             "id": "1",
-            "title": "Crafting Rich Documentation With Vuepress",
-            "date": "August, 11 2018",
-            "event": "Concatenate Conference 2018, Lagos Nigeria",
-            "link": "https://speakerdeck.com/lauragift21/crafting-rich-documentation-with-vuepress"
+            "title": "Introduction to Filecoin",
+            "date": "September, 24 2022",
+            "event": "EthSafari",
+            "link": "https://speakerdeck.com/peterokwara/introduction-to-filecoin"
         },
         {
-            "id": "1",
-            "title": "Crafting Rich Documentation With Vuepress",
-            "date": "August, 11 2018",
-            "event": "Concatenate Conference 2018, Lagos Nigeria",
-            "link": "https://speakerdeck.com/lauragift21/crafting-rich-documentation-with-vuepress"
+            "id": "2",
+            "title": "Immutable references with IPFS and IOTA",
+            "date": "October, 23 2021",
+            "event": "Introduction to Web3 Technology - BitcoinKe",
+            "link": "https://speakerdeck.com/peterokwara/immutable-references-using-ipfs-and-iota"
+        },
+        {
+            "id": "3",
+            "title": "Web 3.0 panel discussion.",
+            "date": "October, 23 2021",
+            "event": "Introduction to Web3 Technology - BitcoinKe",
+            "link": "https://www.youtube.com/watch?v=2wD6hnN3KE8"
         }
     ]
 }

@@ -64,7 +64,10 @@ const IndexPage = ({ data }) => {
                     </p>
                     <div className="flex justify-center">
                         <a href="mailto:ojakaapeter@gmail.com">
-                            <button className="w-32 bg-button hover:bg-button text-button-text px-5 py-2.5 mr-2 mb-2 font-bold rounded-md text-center drop-shadow-md">
+                            <button
+                                arai-label="Email button"
+                                className="w-32 bg-button hover:bg-button text-button-text px-5 py-2.5 mr-2 mb-2 font-bold rounded-md text-center drop-shadow-md"
+                            >
                                 Say Hello
                             </button>
                         </a>
