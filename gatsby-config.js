@@ -1,3 +1,7 @@
+require("dotenv").config({
+    path: `.env.${process.env.NODE_ENV}`
+});
+
 module.exports = {
     siteMetadata: {
         siteUrl: `https://www.peterokwara.com`,
@@ -21,6 +25,17 @@ module.exports = {
             options: {
                 plugins: []
             }
-        }
+        },
+        {
+            resolve: "gatsby-source-graphql",
+            options: {
+                typeName: "GitHub",
+                fieldName: "github",
+                url: "https://api.github.com/graphql",
+                headers: {
+                    Authorization: `Bearer ${process.env.TOKEN}`
+                }
+            }
+        },
     ]
 };

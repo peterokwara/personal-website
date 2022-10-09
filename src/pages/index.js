@@ -2,11 +2,12 @@ import * as React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import { Carousel } from "../components/Common/Carousel/Carousel";
 import { BlogCard } from "../components/Common/BlogCard/BlogCard";
-import { graphql } from "gatsby";
+import { StaticQuery, graphql } from "gatsby";
 import { Header } from "../components/Layout/Header/Header";
 
 const IndexPage = ({ data }) => {
     const { allMarkdownRemark: posts } = data;
+    const { github: repositories } = data;
 
     return (
         <main className="flex flex-col w-full bg-background">
@@ -91,6 +92,22 @@ export const pageQuery = graphql`
                         title
                         description
                         path
+                    }
+                }
+            }
+        }
+        github {
+            viewer {
+                id
+                pinnedItems(first: 4) {
+                    edges {
+                        node {
+                            ... on GitHub_Repository {
+                                id
+                                name
+                                description
+                            }
+                        }
                     }
                 }
             }
