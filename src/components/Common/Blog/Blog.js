@@ -1,6 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
 import { Header } from "../../Layout/Header/Header";
+import "./Blog.css"
 
 // import '../css/blog-post.css'; // make it pretty!
 
@@ -9,12 +10,12 @@ export default function Blog({
 }) {
     const { markdownRemark: post } = data; // data.markdownRemark holds your post data
     return (
-        <main className="flex flex-col w-full h-screen bg-background">
+        <main className="flex flex-col w-full h-full bg-background">
             <Header />
             <section className="m-8 lg:px-40">
                 <h1 className="text-4xl font-semibold text-headline">{post.frontmatter.title}</h1>
                 <div
-                    className="font-serif blog-post-content text-paragraph"
+                    className="font-serif blog-post-content text-paragraph markdown"
                     dangerouslySetInnerHTML={{ __html: post.html }}
                 />
             </section>
