@@ -13,6 +13,7 @@ module.exports = {
         "gatsby-plugin-sharp",
         "gatsby-plugin-catch-links",
         "gatsby-plugin-react-helmet",
+        "gatsby-plugin-sass",
         {
             resolve: `gatsby-source-filesystem`,
             options: {
@@ -36,6 +37,6 @@ module.exports = {
                     Authorization: `Bearer ${process.env.TOKEN}`
                 }
             }
-        },
+        }
     ]
 };

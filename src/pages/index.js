@@ -11,9 +11,9 @@ const IndexPage = ({ data }) => {
     const { github: repositories } = data;
 
     return (
-        <main className="flex flex-col w-full bg-background">
+        <main className="flex flex-col w-fit bg-background">
             <Header />
-            <section className="m-8 lg:px-40 md:px-40">
+            <section className="m-8 lg:px-60 md:px-40 xl:px-90px">
                 <div className="flex flex-col lg:flex-row-reverse lg:justify-center lg:items-center">
                     <div className="flex justify-center">
                         <StaticImage
@@ -24,11 +24,31 @@ const IndexPage = ({ data }) => {
                             alt="Peter Okwara"
                         />
                     </div>
-                    <div className="flex flex-col py-3 text-center sm:text-center md:text-center lg:text-center ">
+                    <div className="flex flex-col py-3 text-center sm:text-center md:text-center lg:text-left ">
                         <h1 className="py-3 font-sans text-6xl font-semibold text-headline">Hello I'm Peter Okwara</h1>
                         <p className="py-4 font-serif text-2xl text-paragraph">
                             I'm a Fullstack and Blockchain Developer based in Kenya.
                         </p>
+                        <div className="flex flex-row justify-center gap-3 lg:justify-start">
+                            <a
+                                href="https://twitter.com/PeterOkwara"
+                                className="text-2xl font-bold hover:text-highlight"
+                            >
+                                TW
+                            </a>
+                            <a
+                                href="https://github.com/peterokwara"
+                                className="text-2xl font-bold hover:text-highlight"
+                            >
+                                GH
+                            </a>
+                            <a
+                                href="https://www.linkedin.com/in/peterokwara/"
+                                className="text-2xl font-bold hover:text-highlight"
+                            >
+                                LI
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div className="py-4 pt-20">

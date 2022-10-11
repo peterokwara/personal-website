@@ -1,3 +1,16 @@
+:root{
+  --bg-color: #faeee7;
+ 	--bg-content-color: #33272a;
+ 	--bg-code: #fffbf3;
+ 	--body-color: #33272a;
+ 	--title-color: #33272a;
+	--link-color: #25232D;
+	--link-accent-color: #ff8ba7;
+	--text-color: #594a4e;
+	--white-text: #fff;
+}
+
+
 .markdown > *  {
     margin-bottom: 1.4rem;
   }

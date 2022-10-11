@@ -17,11 +17,20 @@ const Blog = ({ data }) => {
                             const title = post.node.frontmatter.title;
                             const description = post.node.frontmatter.description;
                             const path = post.node.frontmatter.path;
-
+                            const postTopics = post.node.frontmatter.tags.map((topic, i) => {
+                                return (
+                                    <div
+                                        className="inline-block px-3 py-1 mb-2 mr-2 text-sm font-semibold rounded-full bg-card-tag-background text-card-tag-text"
+                                        key={i}
+                                    >
+                                        {`#${topic}`}
+                                    </div>
+                                );
+                            });
                             return (
-                                <a href={path} key={i}>
-                                    <BlogCard  title={title} description={description} />
-                                </a>
+                                <BlogCard title={title} description={description} path={path} key={i}>
+                                    {postTopics}
+                                </BlogCard>
                             );
                         })}
                     </ol>
@@ -44,6 +53,7 @@ export const pageQuery = graphql`
                         title
                         description
                         path
+                        tags
                     }
                 }
             }

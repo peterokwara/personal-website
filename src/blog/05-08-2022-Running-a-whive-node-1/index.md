@@ -1,11 +1,12 @@
 ---
 path: "/Running-a-whive-node-1"
-date: 2022-08-05T17:12:33.962Z
+date: 2022-08-05
 title: "Running a whive node part 1"
 tags:
     - whive
     - blockchain
-    - web3 
+    - web3
+    - bitcoin 
 description: "In part one of this tutorial, we are going to look into setting up a whive node."
 ---
 
