@@ -2,7 +2,11 @@
 path: "/Running-a-whive-node-1"
 date: 2022-08-05T17:12:33.962Z
 title: "Running a whive node part 1"
-description: "Hello People! Let's move away from core technical things for a bit. In this video, I share soft skills that I feel every developer should learn and improve."
+tags:
+    - whive
+    - blockchain
+    - web3 
+description: "In part one of this tutorial, we are going to look into setting up a whive node."
 ---
 
 # Introduction

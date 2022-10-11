@@ -4,6 +4,7 @@ import { Carousel } from "../components/Common/Carousel/Carousel";
 import { BlogCard } from "../components/Common/BlogCard/BlogCard";
 import { StaticQuery, graphql } from "gatsby";
 import { Header } from "../components/Layout/Header/Header";
+import { ProjectCard } from "../components/Common/ProjectsCard/ProjectsCard";
 
 const IndexPage = ({ data }) => {
     const { allMarkdownRemark: posts } = data;
@@ -23,7 +24,7 @@ const IndexPage = ({ data }) => {
                             alt="Peter Okwara"
                         />
                     </div>
-                    <div className="flex flex-col py-3 text-center sm:text-center md:text-center ">
+                    <div className="flex flex-col py-3 text-center sm:text-center md:text-center lg:text-center ">
                         <h1 className="py-3 font-sans text-6xl font-semibold text-headline">Hello I'm Peter Okwara</h1>
                         <p className="py-4 font-serif text-2xl text-paragraph">
                             I'm a Fullstack and Blockchain Developer based in Kenya.
@@ -35,24 +36,73 @@ const IndexPage = ({ data }) => {
                     <Carousel />
                 </div>
                 <div className="py-4 pt-20">
-                    <h2 className="py-2 text-4xl font-semibold text-center lg:text-left text-headline">
-                        Latest Articles
+                    <h2 className="py-2 text-4xl font-semibold text-center md:text-center lg:text-left text-headline">
+                        Projects
                     </h2>
                     <div className="flex flex-col items-center lg:items-start">
-                        <ol>
-                            {posts.edges.map((post, i) => {
-                                const title = post.node.frontmatter.title;
-                                const description = post.node.frontmatter.description;
-                                const path = post.node.frontmatter.path;
+                        <ol className="w-full">
+                            {repositories.viewer.pinnedItems.edges.map((repo, i) => {
+                                const name = repo.node.name;
+                                const description = repo.node.description;
+                                const url = repo.node.url;
+                                const topics = repo.node.repositoryTopics.edges.map((topic, i) => {
+                                    return (
+                                        <div
+                                            className="inline-block px-3 py-1 mb-2 mr-2 text-sm font-semibold rounded-full bg-card-tag-background text-card-tag-text"
+                                            key={i}
+                                        >
+                                            {`#${topic.node.topic.name}`}
+                                        </div>
+                                    );
+                                });
 
                                 return (
-                                    <a href={path} key={i}>
-                                        <BlogCard title={title} description={description} />
-                                    </a>
+                                    <ProjectCard key={i} name={name} description={description} url={url}>
+                                        {topics}
+                                    </ProjectCard>
                                 );
                             })}
                         </ol>
                     </div>
+                    <a href="https://github.com/peterokwara">
+                        <h3 className="py-2 text-lg font-semibold underline lg:text-left text-headline">
+                            View more pojects ->
+                        </h3>
+                    </a>
+                </div>
+                <div className="py-4 pt-20">
+                    <h2 className="py-2 text-4xl font-semibold text-center lg:text-left text-headline">
+                        Latest Articles
+                    </h2>
+                    <div className="flex flex-col items-center lg:items-start">
+                        <ol className="w-full">
+                            {posts.edges.map((post, i) => {
+                                const title = post.node.frontmatter.title;
+                                const description = post.node.frontmatter.description;
+                                const path = post.node.frontmatter.path;
+                                const postTopics = post.node.frontmatter.tags.map((topic, i) => {
+                                    return (
+                                        <div
+                                            className="inline-block px-3 py-1 mb-2 mr-2 text-sm font-semibold rounded-full bg-card-tag-background text-card-tag-text"
+                                            key={i}
+                                        >
+                                            {`#${topic}`}
+                                        </div>
+                                    );
+                                });
+                                return (
+                                    <BlogCard title={title} description={description} path={path} key={i}>
+                                        {postTopics}
+                                    </BlogCard>
+                                );
+                            })}
+                        </ol>
+                    </div>
+                    <a href="/Blog">
+                        <h3 className="py-2 text-lg font-semibold underline lg:text-left text-headline">
+                            View more posts ->
+                        </h3>
+                    </a>
                 </div>
                 <div className="flex flex-col pt-20" id="Contact">
                     <h2 className="font-sans text-4xl font-semibold text-center text-headline">Get in touch</h2>
@@ -92,6 +142,7 @@ export const pageQuery = graphql`
                         title
                         description
                         path
+                        tags
                     }
                 }
             }
@@ -106,6 +157,17 @@ export const pageQuery = graphql`
                                 id
                                 name
                                 description
+                                url
+                                repositoryTopics(first: 5) {
+                                    edges {
+                                        node {
+                                            id
+                                            topic {
+                                                name
+                                            }
+                                        }
+                                    }
+                                }
                             }
                         }
                     }

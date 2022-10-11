@@ -8,7 +8,7 @@ export const Header = () => {
     useEffect(() => {});
 
     return (
-        <header className="top-0 flex justify-center px-8 my-4 h-max md:px-12">
+        <header className="top-0 flex items-center justify-center px-8 my-4 h-max md:px-12">
             <a href="/" className="lg:hidden md:hidden">
                 <h1 className="content-center pb-1 text-2xl font-semibold md:text-6xl">Home</h1>
             </a>
