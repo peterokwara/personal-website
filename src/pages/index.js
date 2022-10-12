@@ -32,19 +32,19 @@ const IndexPage = ({ data }) => {
                         <div className="flex flex-row justify-center gap-3 lg:justify-start">
                             <a
                                 href="https://twitter.com/PeterOkwara"
-                                className="text-4xl font-semibold hover:text-highlight"
+                                className="text-2xl font-semibold hover:text-highlight"
                             >
                                 TW
                             </a>
                             <a
                                 href="https://github.com/peterokwara"
-                                className="text-4xl font-semibold hover:text-highlight"
+                                className="text-2xl font-semibold hover:text-highlight"
                             >
                                 GH
                             </a>
                             <a
                                 href="https://www.linkedin.com/in/peterokwara/"
-                                className="text-4xl font-semibold hover:text-highlight"
+                                className="text-2xl font-semibold hover:text-highlight"
                             >
                                 LI
                             </a>
