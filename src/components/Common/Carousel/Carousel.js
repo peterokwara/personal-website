@@ -335,7 +335,7 @@ export const Carousel = () => {
             <div {...handlers} className="flex flex-row justify-center gap-4 overflow-hidden transition duration-300 transform lg:hidden hover:scale-105">
                 {cardSlider()}
             </div>
-            <div className="hidden gap-4 transition duration-300 transform lg:justify-center lg:flex-row lg:flex hover:scale-105">{allCards()}</div>
+            <div className="hidden gap-4 transform lg:justify-center lg:flex-row lg:flex">{allCards()}</div>
             <div className="flex flex-row justify-center py-4 lg:hidden">
                 <div
                     className={`w-4 h-4 ml-1 mr-1 rounded-full cursor-pointer ${
