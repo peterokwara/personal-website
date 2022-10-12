@@ -332,11 +332,11 @@ export const Carousel = () => {
 
     return (
         <div className="py-4">
-            <div {...handlers} className="flex flex-row justify-center gap-4 overflow-hidden lg:hidden transform hover:scale-105 transition duration-300">
+            <div {...handlers} className="flex flex-row justify-center gap-4 overflow-hidden transition duration-300 transform lg:hidden hover:scale-105">
                 {cardSlider()}
             </div>
             <div className="hidden gap-4 transition duration-300 transform lg:justify-center lg:flex-row lg:flex hover:scale-105">{allCards()}</div>
-            <div className="flex flex-row justify-center lg:hidden">
+            <div className="flex flex-row justify-center py-4 lg:hidden">
                 <div
                     className={`w-4 h-4 ml-1 mr-1 rounded-full cursor-pointer ${
                         card === 0 ? "bg-highlight" : "bg-card-background"

@@ -18,6 +18,9 @@ module.exports = {
             highlight: "#ff8ba7",
             stroke: "#33272a"
         },
+        fontFamily: {
+            google: ["Roboto", "sans-serif"],
+        },
         extend: {}
     }
 };

@@ -12,7 +12,6 @@ module.exports = {
         "gatsby-plugin-image",
         "gatsby-plugin-sharp",
         "gatsby-plugin-catch-links",
-        "gatsby-plugin-react-helmet",
         "gatsby-plugin-sass",
         {
             resolve: `gatsby-source-filesystem`,

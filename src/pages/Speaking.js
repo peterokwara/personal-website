@@ -5,7 +5,7 @@ import talks from "../data/speaking.json";
 
 const Speaking = () => {
     return (
-        <main className="flex flex-col w-full h-screen bg-background">
+        <main className="flex flex-col w-full h-full font-google bg-background">
             <Header />
             <section className="m-8 lg:px-40 md:px-40">
                 <div className="flex flex-col">
@@ -23,7 +23,7 @@ const Speaking = () => {
                             })}
                         </ol>
                     ) : (
-                        <p className="text-base text-brown text-paragraph">
+                        <p className="text-base font-normal text-brown text-paragraph">
                             Want me to speak at your event? Reach out to me via{" "}
                             <a href="mailto:ojakaapeter@gmail.com" className="text-highlight">
                                 email&nbsp;

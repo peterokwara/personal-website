@@ -3,7 +3,7 @@ import { Header } from "../components/Layout/Header/Header";
 
 const About = () => {
     return (
-        <main className="flex flex-col w-full h-screen bg-background">
+        <main className="flex flex-col w-full h-screen bg-background font-google">
             <Header />
             <section className="m-8 lg:px-40 md:px-40">
                 <div className="flex flex-col" id="Contact">
@@ -17,7 +17,7 @@ const About = () => {
                         <br />
                         Say hi
                         <a className="text-link" href="twitter.com/peterokwara">
-                            &nbsp; @peterokwara
+                            &nbsp;@peterokwara
                         </a>
                     </p>
                 </div>

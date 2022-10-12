@@ -9,7 +9,7 @@ export const ProjectCard = props => {
                 }
             >
                 <h5 className="mb-2 text-xl font-semibold text-headline">{props.name}</h5>
-                <h5 className="mb-2 text-base font-semibold text-headline">{props.description}</h5>
+                <h5 className="mb-2 text-base font-normal text-headline">{props.description}</h5>
                 <div className="flex flex-row flex-wrap py-4">{props.children}</div>
             </div>
         </a>

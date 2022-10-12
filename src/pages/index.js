@@ -2,7 +2,7 @@ import * as React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import { Carousel } from "../components/Common/Carousel/Carousel";
 import { BlogCard } from "../components/Common/BlogCard/BlogCard";
-import { StaticQuery, graphql } from "gatsby";
+import { graphql } from "gatsby";
 import { Header } from "../components/Layout/Header/Header";
 import { ProjectCard } from "../components/Common/ProjectsCard/ProjectsCard";
 
@@ -11,7 +11,7 @@ const IndexPage = ({ data }) => {
     const { github: repositories } = data;
 
     return (
-        <main className="flex flex-col w-fit bg-background">
+        <main className="flex flex-col w-fit bg-background font-google">
             <Header />
             <section className="m-8 lg:px-60 md:px-40 xl:px-90px">
                 <div className="flex flex-col lg:flex-row-reverse lg:justify-center lg:items-center">
@@ -25,26 +25,26 @@ const IndexPage = ({ data }) => {
                         />
                     </div>
                     <div className="flex flex-col py-3 text-center sm:text-center md:text-center lg:text-left ">
-                        <h1 className="py-3 font-sans text-6xl font-semibold text-headline">Hello I'm Peter Okwara</h1>
+                        <h1 className="py-3 text-6xl font-semibold text-headline ">Hello I'm Peter Okwara</h1>
                         <p className="py-4 font-serif text-2xl text-paragraph">
                             I'm a Fullstack and Blockchain Developer based in Kenya.
                         </p>
                         <div className="flex flex-row justify-center gap-3 lg:justify-start">
                             <a
                                 href="https://twitter.com/PeterOkwara"
-                                className="text-2xl font-bold hover:text-highlight"
+                                className="text-4xl font-semibold hover:text-highlight"
                             >
                                 TW
                             </a>
                             <a
                                 href="https://github.com/peterokwara"
-                                className="text-2xl font-bold hover:text-highlight"
+                                className="text-4xl font-semibold hover:text-highlight"
                             >
                                 GH
                             </a>
                             <a
                                 href="https://www.linkedin.com/in/peterokwara/"
-                                className="text-2xl font-bold hover:text-highlight"
+                                className="text-4xl font-semibold hover:text-highlight"
                             >
                                 LI
                             </a>
@@ -68,7 +68,7 @@ const IndexPage = ({ data }) => {
                                 const topics = repo.node.repositoryTopics.edges.map((topic, i) => {
                                     return (
                                         <div
-                                            className="inline-block px-3 py-1 mb-2 mr-2 text-sm font-semibold rounded-full bg-card-tag-background text-card-tag-text"
+                                            className="inline-block px-3 py-1 mb-2 mr-2 text-sm font-normal rounded-full bg-card-tag-background text-card-tag-text"
                                             key={i}
                                         >
                                             {`#${topic.node.topic.name}`}
@@ -103,7 +103,7 @@ const IndexPage = ({ data }) => {
                                 const postTopics = post.node.frontmatter.tags.map((topic, i) => {
                                     return (
                                         <div
-                                            className="inline-block px-3 py-1 mb-2 mr-2 text-sm font-semibold rounded-full bg-card-tag-background text-card-tag-text"
+                                            className="inline-block px-3 py-1 mb-2 mr-2 text-sm font-normal rounded-full bg-card-tag-background text-card-tag-text"
                                             key={i}
                                         >
                                             {`#${topic}`}
