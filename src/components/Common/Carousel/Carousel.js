@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { SkillCard } from "../SkillCard/SkillCard";
 import { StaticImage } from "gatsby-plugin-image";
+import { useSwipeable } from "react-swipeable";
 
 export const Carousel = () => {
-    const [card, setActive] = useState(1);
+    const [card, setActive] = useState(0);
 
     const content = [
         {
@@ -22,9 +23,14 @@ export const Carousel = () => {
         }
     ];
 
+    const handlers = useSwipeable({
+        onSwipedRight: () => setActive(card === 0 ? 0 : card - 1 ),
+        onSwipedLeft: () => setActive(card === 2 ? 2 : card + 1 )
+    });
+
     const cardSlider = () => {
         switch (card) {
-            case 1:
+            case 0:
                 return (
                     <SkillCard heading={content[0].title} content={content[0].content}>
                         <StaticImage
@@ -99,7 +105,7 @@ export const Carousel = () => {
                         />
                     </SkillCard>
                 );
-            case 2:
+            case 1:
                 return (
                     <SkillCard heading={content[1].title} content={content[1].content}>
                         <StaticImage
@@ -146,7 +152,7 @@ export const Carousel = () => {
                         />
                     </SkillCard>
                 );
-            case 3:
+            case 2:
                 return (
                     <SkillCard heading={content[2].title} content={content[2].content}>
                         <StaticImage
@@ -326,20 +332,28 @@ export const Carousel = () => {
 
     return (
         <div className="py-4">
-            <div className="flex flex-row justify-center gap-4 overflow-hidden lg:hidden">{cardSlider()}</div>
-            <div className="hidden gap-4 lg:justify-center lg:flex-row lg:flex">{allCards()}</div>
+            <div {...handlers} className="flex flex-row justify-center gap-4 overflow-hidden lg:hidden transform hover:scale-105 transition duration-300">
+                {cardSlider()}
+            </div>
+            <div className="hidden gap-4 transition duration-300 transform lg:justify-center lg:flex-row lg:flex hover:scale-105">{allCards()}</div>
             <div className="flex flex-row justify-center lg:hidden">
                 <div
-                    className="w-4 h-4 ml-1 mr-1 rounded-full cursor-pointer bg-card-background hover:bg-highlight focus:bg-highlight active:bg-focus drop-shadow-md "
+                    className={`w-4 h-4 ml-1 mr-1 rounded-full cursor-pointer ${
+                        card === 0 ? "bg-highlight" : "bg-card-background"
+                    } active:bg-focus drop-shadow-md `}
+                    onClick={() => setActive(0)}
+                />
+                <div
+                    className={`w-4 h-4 ml-1 mr-1 rounded-full cursor-pointer ${
+                        card === 1 ? "bg-highlight" : "bg-card-background"
+                    } active:bg-focus drop-shadow-md `}
                     onClick={() => setActive(1)}
                 />
                 <div
-                    className="w-4 h-4 ml-1 mr-1 rounded-full cursor-pointer bg-card-background hover:bg-highlight focus:bg-highlight active:bg-focus drop-shadow-md "
+                    className={`w-4 h-4 ml-1 mr-1 rounded-full cursor-pointer ${
+                        card === 2 ? "bg-highlight" : "bg-card-background"
+                    } active:bg-focus drop-shadow-md `}
                     onClick={() => setActive(2)}
-                />
-                <div
-                    className="w-4 h-4 ml-1 mr-1 rounded-full cursor-pointer bg-card-background hover:bg-highlight focus:bg-highlight active:bg-focus drop-shadow-md "
-                    onClick={() => setActive(3)}
                 />
             </div>
         </div>
