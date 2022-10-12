@@ -10,12 +10,12 @@ export default function Blog({
 }) {
     const { markdownRemark: post } = data; // data.markdownRemark holds your post data
     return (
-        <main className="flex flex-col w-full h-full bg-background">
+        <main className="flex flex-col w-full h-full bg-background font-google">
             <Header />
             <section className="m-8 lg:px-40">
                 <h1 className="text-4xl font-semibold text-center text-headline">{post.frontmatter.title}</h1>
                 <h3 className="py-2 text-2xl text-center text-headline">{post.frontmatter.date}</h3>
-                <div className="flex flex-row justify-center py-2">
+                <div className="flex flex-row justify-center py-2 flex-wrap">
                     {post.frontmatter.tags.map((topic, i) => {
                         return (
                             <div
