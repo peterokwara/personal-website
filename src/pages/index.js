@@ -60,7 +60,7 @@ const IndexPage = ({ data }) => {
                         Projects
                     </h2>
                     <div className="flex flex-col items-center lg:items-start ">
-                        <ol className="w-full lg:grid lg:grid-cols-2 lg:gap-4">
+                        <ol className="w-full lg:grid lg:grid-cols-2 lg:gap-6">
                             {repositories.viewer.pinnedItems.edges.map((repo, i) => {
                                 const name = repo.node.name;
                                 const description = repo.node.description;
