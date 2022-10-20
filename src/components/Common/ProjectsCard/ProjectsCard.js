@@ -5,7 +5,7 @@ export const ProjectCard = props => {
         <a href={props.url}>
             <div
                 className={
-                    "relative flex flex-col p-8 my-8 rounded-lg bg-card-background h-auto lg:h-auto lg:w-full w-full drop-shadow-md transform hover:scale-105 transition duration-300"
+                    "relative flex flex-col p-8 my-8 rounded-lg bg-card-background h-auto lg:h-96 lg:w-full w-full drop-shadow-md transform hover:scale-105 transition duration-300"
                 }
             >
                 <h5 className="mb-2 text-xl font-semibold text-headline">{props.name}</h5>
