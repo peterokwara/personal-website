@@ -5,7 +5,7 @@ import talks from "../data/speaking.json";
 
 const Speaking = () => {
     return (
-        <main className="flex flex-col h-full font-google bg-background">
+        <main className="flex flex-col h-screen font-google bg-background">
             <Header />
             <section className="flex flex-col justify-center max-w-3xl px-8 mx-auto">
                 <div className="flex flex-col">
