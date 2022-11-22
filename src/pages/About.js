@@ -3,7 +3,7 @@ import { Header } from "../components/Layout/Header/Header";
 
 const About = () => {
     return (
-        <main className="flex flex-col h-screen bg-background font-google">
+        <main className="flex flex-col h-full bg-background font-google">
             <Header />
             <section className="flex flex-col justify-center max-w-3xl px-8 mx-auto">
                 <div className="flex flex-col" id="Contact">
