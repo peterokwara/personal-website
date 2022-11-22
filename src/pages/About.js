@@ -3,9 +3,9 @@ import { Header } from "../components/Layout/Header/Header";
 
 const About = () => {
     return (
-        <main className="flex flex-col w-full h-screen bg-background font-google">
+        <main className="flex flex-col h-screen bg-background font-google">
             <Header />
-            <section className="m-8 lg:px-40 md:px-40">
+            <section className="flex flex-col justify-center max-w-3xl px-8 mx-auto">
                 <div className="flex flex-col" id="Contact">
                     <h2 className="text-4xl font-semibold text-headline">About Me</h2>
                     <p className="py-4 text-base text-paragraph">

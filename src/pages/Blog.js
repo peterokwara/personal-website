@@ -7,9 +7,9 @@ const Blog = ({ data }) => {
     const { allMarkdownRemark: posts } = data;
 
     return (
-        <main className="flex flex-col w-full h-screen bg-background font-google">
+        <main className="flex flex-col h-screen bg-background font-google">
             <Header />
-            <section className="m-8 lg:px-40 md:px-40">
+            <section className="flex flex-col justify-center max-w-3xl px-8 mx-auto">
                 <div className="flex flex-col">
                     <h2 className="text-4xl font-semibold text-headline">Blog</h2>
                     <ol>

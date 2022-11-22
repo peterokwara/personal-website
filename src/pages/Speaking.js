@@ -5,9 +5,9 @@ import talks from "../data/speaking.json";
 
 const Speaking = () => {
     return (
-        <main className="flex flex-col w-full h-full font-google bg-background">
+        <main className="flex flex-col h-screen font-google bg-background">
             <Header />
-            <section className="m-8 lg:px-40 md:px-40">
+            <section className="flex flex-col justify-center max-w-3xl px-8 mx-auto">
                 <div className="flex flex-col">
                     <h2 className="text-4xl font-semibold text-headline">Speaking</h2>
                     <h2 className="py-4 text-2xl font-semibold text-headline">Upcoming Talks</h2>

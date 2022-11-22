@@ -3,20 +3,27 @@
     "past": [
         {
             "id": "1",
+            "title": "Decentralized storage using IPFS",
+            "date": "November, 18 2022",
+            "event": "Droidcon 2022",
+            "link": "https://github.com/peterokwara/lemur-nft"
+        },
+        {
+            "id": "2",
             "title": "Introduction to Filecoin",
             "date": "September, 24 2022",
             "event": "EthSafari",
             "link": "https://speakerdeck.com/peterokwara/introduction-to-filecoin"
         },
         {
-            "id": "2",
+            "id": "3",
             "title": "Immutable references with IPFS and IOTA",
             "date": "October, 23 2021",
             "event": "Introduction to Web3 Technology - BitcoinKe",
             "link": "https://speakerdeck.com/peterokwara/immutable-references-using-ipfs-and-iota"
         },
         {
-            "id": "3",
+            "id": "4",
             "title": "Web 3.0 panel discussion.",
             "date": "October, 23 2021",
             "event": "Introduction to Web3 Technology - BitcoinKe",

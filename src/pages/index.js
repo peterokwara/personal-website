@@ -11,9 +11,9 @@ const IndexPage = ({ data }) => {
     const { github: repositories } = data;
 
     return (
-        <main className="flex flex-col w-fit bg-background font-google">
+        <main className="flex flex-col justify-center bg-background font-google">
             <Header />
-            <section className="m-8 lg:px-60 md:px-40 xl:px-90px">
+            <section className="flex flex-col justify-center max-w-3xl px-8 mx-auto">
                 <div className="flex flex-col lg:flex-row-reverse lg:justify-center lg:items-center">
                     <div className="flex justify-center">
                         <StaticImage
