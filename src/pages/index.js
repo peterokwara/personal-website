@@ -59,8 +59,8 @@ const IndexPage = ({ data }) => {
                     <h2 className="py-2 text-4xl font-semibold text-center md:text-center lg:text-left text-headline">
                         Projects
                     </h2>
-                    <div className="flex flex-col items-center lg:items-start">
-                        <ol className="w-full">
+                    <div className="flex flex-col items-center lg:items-start my-6">
+                        <ol className="w-full lg:grid lg:grid-cols-2 lg:gap-6">
                             {repositories.viewer.pinnedItems.edges.map((repo, i) => {
                                 const name = repo.node.name;
                                 const description = repo.node.description;
